@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+    font-family: sans;
+    color: white;
+    background-color: black;
+}
+
+#enter {
+    width: 220px;
+    height: 120px;
+    background: black;
+    color: white;
+    font-size: 200%;
+    -webkit-transition: color 1s, background-color 1s;
+    transition: color 1s, background-color 1s;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+#enter:hover {
+    color: black;
+    background-color: white;
+}
+
+#content {
+    position: relative;
+    margin: auto;
+    padding-top: 20em;
+    padding-bottom: 20em;
+}
