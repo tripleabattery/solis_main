@@ -1,9 +1,13 @@
 html {
     background-color: black;
     
-    background-image: url("/img/splash_mobile.png");
+    background-image: url("/img/splash_mobile.svg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.ui-loader-header {
+    display: none;
 }
