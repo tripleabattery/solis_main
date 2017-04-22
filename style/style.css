@@ -1,11 +1,13 @@
 html {
     background-color: black;
     
-    background-image: url("/img/splash.png");
+    background-image: url("/img/splash.svg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    overflow: hidden;
 }
 
 .ui-loader-header {
