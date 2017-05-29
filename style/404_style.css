@@ -1,0 +1,15 @@
+html {
+    background-color: black;
+    
+    background-image: url("/img/404_Desktop.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+.ui-loader-header {
+    display: none;
+}
