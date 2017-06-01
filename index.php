@@ -39,7 +39,7 @@
     </head>
 
     <body>
-        <a href="pages/store.html"> STORE </a>
+        <a href="pages/shop.html"> STORE </a>
     </body>
 
 
