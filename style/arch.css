@@ -31,12 +31,11 @@ div.item {
     float: left;
     width:calc(100% / 3);
     text-align: center;
-    padding: 5% 0 0 0;
 }
 
 div.item img {
     width: 90%;
-    margin: 4vh 0 0 0;
+    margin: 13vh 0 0 0;
 }
 
 div.description {
@@ -64,10 +63,38 @@ div.bogo {
     margin: 0 auto 0 auto;
 }
 
-div.bogo a img {
+div.bogo div div {
     display: block;
-    margin: auto;
+    text-align: center;
+}
+
+div.bogo div div a.logo {
+    clear: none;
+}
+
+div.bogo div div a.left{
+    text-decoration: none;
+}
+
+div.bogo div div a.logo {
+    text-decoration: none;
+}
+
+div.bogo div div a.right{
+    text-decoration: none;
+}
+
+div.bogo div div a.left img {
+    width: 7.5%;
+}
+
+div.bogo div div a.logo img {
+    margin: auto 4vh auto 4vh;
     width: 20%;
+}
+
+div.bogo div div a.right img{
+    width: 7.5%;
 }
 
 @font-face {
