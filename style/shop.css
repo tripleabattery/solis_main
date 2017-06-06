@@ -1,5 +1,7 @@
 body {
     font-family: futurapt;
+    background-color: white;
+    color: black;
 }
 
 #product-name {
@@ -21,9 +23,9 @@ body {
 #product-image img{
     display: block;
     margin: auto;
-    width: 40%;
-    height: 40%;
-    padding-top: 25%;
+    width: 75%;
+    height: 75%;
+/*    padding-top: 20%; */
 }
 
 #product-description {
@@ -46,8 +48,9 @@ body {
 #logo img {
     display: block;
     margin: auto;
-    width: 50%;
-    height: 50%;
+    width: 25%;
+    height: 25%;
+    padding-bottom: 1em;
 }
 
 @font-face {
