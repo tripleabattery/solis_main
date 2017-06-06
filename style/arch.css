@@ -3,11 +3,7 @@ html, body {
     margin:0;
     padding:0;
     background-color: white;
-}
-
-#wrapper {
-    position: absolute;
-    margin: auto;
+    color: black;
 }
 
 div.title {
@@ -28,7 +24,7 @@ div.title table td {
     width: 100%;
     height: 100%;
     text-align: center;
-    font-size: 175%;
+    font-size: 150%;
 }
 
 div.item {
@@ -39,7 +35,8 @@ div.item {
 }
 
 div.item img {
-    width: 100%;
+    width: 90%;
+    margin: 4vh 0 0 0;
 }
 
 div.description {
@@ -59,7 +56,7 @@ div.description table td {
     width: 100%;
     height: 100%;
     text-align: center;
-    font-size: 175%;
+    font-size: 150%;
 }
 
 div.bogo {
