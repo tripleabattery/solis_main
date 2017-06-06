@@ -1,1 +1,6 @@
-Options -Indexes
+
+Options +FollowSymLinks +MultiViews -indexes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^/pages([^\.]+)$ $1.php [NC,L]
+RewriteRule ^pages/([^\.]+)$ pages/$1.html [NC,L]

@@ -7,7 +7,7 @@
     <body>
         <div class="title">
             <table>
-                <td>SOLIS x MARTIN SHKRELI<br><br>"PLEAD THE FIFTH"<br>TEE</td>
+                <td id="title">SOLIS x MARTIN SHKRELI<br><br>"PLEAD THE FIFTH"<br>TEE</td>
             </table>
         </div>
         <div class="item">
@@ -19,8 +19,16 @@
             </table>
         </div>
         <div class="bogo">
-            <a href="http://sxlis.com/">
+            <a onclick="replace()">
                 <img src="/img/boxlogo.png">
             </a>
         </div>
     </body>
+    <script type="text/javascript">
+     function replace() {
+         document.getElementById("title").innerHTML = "SAME SHIRT<br>BUT DIFFERENT NAME" ;
+         window.history.pushState('page2', 'Title', 'differenturl');
+     };
+
+    </script>
+</html>
