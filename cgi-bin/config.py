@@ -19,29 +19,30 @@ page = """
 
 <div class="title">
 <table>
-<td>{0}</td>
+<td>{title}</td>
 </table>
 </div>
 <div class="item">
 <a href="PLACEHOLDER">
-<img src="/img/uploads/{1}";>
+<img src="/img/uploads/{image}">
 </a>
 </div>
 <div class="description">
 <table>
-{2}
+<td>{desc}</td>
+</table>
 </div>
 
 <div class="bogo">
 <div>
 <div>
-<a href="PLACEHOLDER" class="left">
+<a href="http://dev.sxlis.com/cgi-bin/arch.py?ID={idprev}" class="left">
 <img src="/img/left.png">
 </a>
 <a href="http://sxlis.com/" class="logo">
 <img src="/img/boxlogo.png">
 </a>
-<a href="PLACEHOLDER" class="right">
+<a href="http://dev.sxlis.com/cgi-bin/arch.py?ID={idnext}" class="right">
 <img src="/img/right.png">
 </a>
 </div>
