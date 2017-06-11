@@ -27,17 +27,28 @@ else:
 
     cursor = cnx.cursor()
     sql = "SELECT * FROM `Items` WHERE `ID` = {0} " # Get items fro table `Items`
+    sql2 = "SELECT `ID` FROM `Items`" # Get ID numbers
     try:
-        #print(form)
 
         cursor.execute(sql.format(form["ID"].value))
         current = cursor.fetchone()
 
         cursor.execute(sql.format(int(form["ID"].value)+1))
-        nextitem = cursor.fetchone()
+        result = cursor.fetchone()
+        if result:
+            nextitem = result[0]
+        else:
+            nextitem = 0
 
         cursor.execute(sql.format(int(form["ID"].value)-1))
-        previtem = cursor.fetchone()
+        result = cursor.fetchone()
+        if result:
+            previtem = result[0]
+        else:
+            previtem = 0
+
+        cursor.execute(sql2)
+        numbs = cursor.fetchall()
 
     except _mysql_exceptions.MySQLError as err:
         print("<h1>There was an Error:</h1><br>")
@@ -48,7 +59,9 @@ else:
 
     else:
 
-        print(page.format(title=current[1], desc=current[2], image=current[3], idprev=previtem[0], idnext=nextitem[0]))
-        #TODO:  Fix bug where clicking next sends the user to an item that doesn't exist
+        print(page.format(title=current[1], desc=current[2], image=current[3], idprev=previtem, idnext=nextitem))
+        print(numbs)
+        #TODO:  Fix bug where clicking next/prev on an item that doesn't have a next/prev item causes an error
+        #TODO: Allow non-sequential ID numbers
 
     cnx.close()
