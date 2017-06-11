@@ -1,7 +1,7 @@
 body {
-    color: white;
-    background-color: black;
-    font-family: avenirnext;
+    color: black;
+    background-color: white;
+    font-family: futurapt;
     text-align: center;
     
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -38,4 +38,9 @@ body {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@font-face {
+    font-family: futurapt;
+    src: url(/fonts/4d6d50ec-b049-44ba-a001-e847c3e2dc79.ttf)
 }

@@ -7,7 +7,7 @@ import cgitb; cgitb.enable()
 
 form = cgi.FieldStorage()
 
-print("Content-Type: text/html")
+print("Content-Type: text/html\n\n")
 
 ########################
 #    Database Stuff    #
@@ -18,7 +18,7 @@ import _mysql_exceptions
 
 try:
     cnx = MySQLdb.connect(mysql["host"], mysql["user"], mysql["pass"], mysql["database"])
-    
+
 except MySQLdb.error as err:
 
     print(err)
@@ -26,29 +26,34 @@ except MySQLdb.error as err:
 else:
 
     cursor = cnx.cursor()
-    sql = "SELECT * FROM `Items` WHERE `ID` = {0} " # Get items fro table `Items`
-    sql2 = "SELECT `ID` FROM `Items`" # Get ID numbers
+    sql = "SELECT * FROM `Items` WHERE `URL` = '{0}' " # Get items fro table `Items`
+    sql2 = "SELECT `URL` FROM `Items`" # Get ID numbers
     try:
 
-        cursor.execute(sql.format(form["ID"].value))
-        current = cursor.fetchone()
-
-        cursor.execute(sql.format(int(form["ID"].value)+1))
+        cursor.execute(sql.format(form["URL"].value))
         result = cursor.fetchone()
-        if result:
-            nextitem = result[0]
-        else:
-            nextitem = 0
-
-        cursor.execute(sql.format(int(form["ID"].value)-1))
-        result = cursor.fetchone()
-        if result:
-            previtem = result[0]
-        else:
-            previtem = 0
+        current = result
+        currentid = result[4]
 
         cursor.execute(sql2)
-        numbs = cursor.fetchall()
+        results = cursor.fetchall()
+        for x in results:
+            if currentid == x[0]:
+                print
+                currentidindex = results.index(x)
+                break
+
+        #print(results)
+
+        try:
+            nextitem = results[currentidindex+1]
+        except:
+            nextitem = results[0]
+
+        try:
+            previtem = results[currentidindex-1]
+        except:
+            previtem = results[-1]
 
     except _mysql_exceptions.MySQLError as err:
         print("<h1>There was an Error:</h1><br>")
@@ -59,9 +64,6 @@ else:
 
     else:
 
-        print(page.format(title=current[1], desc=current[2], image=current[3], idprev=previtem, idnext=nextitem))
-        print(numbs)
-        #TODO:  Fix bug where clicking next/prev on an item that doesn't have a next/prev item causes an error
-        #TODO: Allow non-sequential ID numbers
+        print(page.format(title=current[1], desc=current[2], image=current[3], idprev=previtem[0], idnext=nextitem[0]))
 
     cnx.close()

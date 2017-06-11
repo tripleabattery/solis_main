@@ -36,13 +36,13 @@ page = """
 <div class="bogo">
 <div>
 <div>
-<a href="http://dev.sxlis.com/cgi-bin/arch.py?ID={idprev}" class="left">
+<a href="http://dev.sxlis.com/cgi-bin/arch.py?URL={idprev}" class="left">
 <img src="/img/left.png">
 </a>
 <a href="http://sxlis.com/" class="logo">
 <img src="/img/boxlogo.png">
 </a>
-<a href="http://dev.sxlis.com/cgi-bin/arch.py?ID={idnext}" class="right">
+<a href="http://dev.sxlis.com/cgi-bin/arch.py?URL={idnext}" class="right">
 <img src="/img/right.png">
 </a>
 </div>
