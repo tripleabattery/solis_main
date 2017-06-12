@@ -1,4 +1,11 @@
+Options +FollowSymlinks
 Addhandler cgi-script .py .pl .cgi
 ErrorDocument 404 /errors/404.php
 ErrorDocument 500 /errors/500.shtml
 ErrorDocument 403 /errors/403.shtml
+
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^archives/ss18/(.*)$ ./cgi-bin/arch.py?URL=$1

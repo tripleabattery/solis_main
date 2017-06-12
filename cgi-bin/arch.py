@@ -26,8 +26,8 @@ except MySQLdb.error as err:
 else:
 
     cursor = cnx.cursor()
-    sql = "SELECT * FROM `Items` WHERE `URL` = '{0}' " # Get items fro table `Items`
-    sql2 = "SELECT `URL` FROM `Items`" # Get ID numbers
+    sql = "SELECT * FROM `Items` WHERE `URL` = '{0}' " # Get items from table `Items`
+    sql2 = "SELECT `URL` FROM `Items`" # Get URL endings
     try:
 
         cursor.execute(sql.format(form["URL"].value))

@@ -40,7 +40,7 @@
 
     <body>
         <a href="pages/arch"> STORE </a>
-        <a href="cgi-bin/arch.py?URL=solislogotee"> ARCHIVE </a>
+        <a href="/archives/ss18/solislogotee"> ARCHIVE </a>
     </body>
 
 
