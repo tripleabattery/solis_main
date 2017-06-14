@@ -39,7 +39,6 @@
     </head>
 
     <body>
-        <a href="pages/arch"> STORE </a>
         <a href="/archives/ss18/solislogotee"> ARCHIVE </a>
     </body>
 
