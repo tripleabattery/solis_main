@@ -69,6 +69,6 @@ else:
         print("</h2></body></html>")
 
     else:
-        print(page.format(title=current[2], desc=current[3], image=current[4], idprev=previtem[5], idnext=nextitem[5]))
+        print(page.format(title=current[2], desc=current[3], image=current[4], drop=form["DROP"].value, idprev=previtem[5], idnext=nextitem[5]))
 
     cnx.close()
