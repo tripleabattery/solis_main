@@ -39,7 +39,7 @@
     </head>
 
     <body>
-        <a href="/archives/ss18/solislogotee"> ARCHIVE </a>
+        <a href="/archives"> ARCHIVE </a>
     </body>
 
 

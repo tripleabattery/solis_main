@@ -9,3 +9,4 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
 RewriteRule ^archives/(.*)/(.*)$ ./cgi-bin/arch.py?DROP=$1&URL=$2
+RewriteRule ^archives ./pages/archive.html
