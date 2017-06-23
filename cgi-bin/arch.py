@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-from config import page, mysql
+#TODO: Cleanup, Documentation
+
+from config import page, mysql, drops
 import os, sys
 import cgi
 import cgitb; cgitb.enable()
@@ -27,8 +29,8 @@ except MySQLdb.error as err:
 else:
 
     cursor = cnx.cursor()
-    sql = "SELECT * FROM `Items` WHERE `URL` = '{0}' " # Get items from table `Items`
-    sql2 = "SELECT * FROM `Items`" # Get URL endings
+    sql = drops[form["DROP"].value]["getitems"] # Get items from table `Items`
+    sql2 = drops[form["DROP"].value]["geturls"] # Get URL endings
 
     try:
 

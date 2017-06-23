@@ -8,4 +8,4 @@ RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
-RewriteRule ^archives/ss18/(.*)$ ./cgi-bin/arch.py?URL=$1
+RewriteRule ^archives/(.*)/(.*)$ ./cgi-bin/arch.py?DROP=$1&URL=$2

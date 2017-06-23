@@ -7,6 +7,19 @@ mysql = {
 
 }
 
+# SQL statements for each clothing drop (Most secure way to do this)
+drops = {
+    "dev" : {
+        "getitems" : "SELECT * FROM `Items` WHERE `URL` = '{0}' ",
+        "geturls" : "SELECT * FROM `Items`"
+        },
+
+    "ss18" : {
+        "getitems" : "SELECT * FROM `ss18` WHERE `URL` = '{0}' ",
+        "geturls" : "SELECT * FROM `ss18`"
+    }
+}
+
 page = """
 <!DOCTYPE html>
 <html>
