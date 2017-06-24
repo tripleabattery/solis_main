@@ -31,6 +31,7 @@ page = """
 <head>
 <title>SOLIS 2018 S/S Archive</title>
 <link rel="stylesheet" type="text/css" href="/style/arch.css">
+ <script src="/javascript/imgswap.js"></script> 
 </head>
 
 <body>
@@ -41,8 +42,8 @@ page = """
 </table>
 </div>
 <div class="item">
-<a href="PLACEHOLDER">
-<img src="/img/uploads/{image}">
+<a href="javascript:void(0)">
+<img id="itempic" src="/img/uploads/{image}" onclick="imgswap('{funcimg1}', '{funcimg2}')">
 </a>
 </div>
 <div class="description">
