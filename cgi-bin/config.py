@@ -17,6 +17,11 @@ drops = {
     "ss18" : {
         "getitems" : "SELECT * FROM `ss18` WHERE `URL` = '{0}' ",
         "geturls" : "SELECT * FROM `ss18`"
+    },
+
+    "aw18" : {
+        "getitems" : "SELECT * FROM `aw18` WHERE `URL` = '{0}' ",
+        "geturls" : "SELECT * FROM `aw18`"
     }
 }
 
