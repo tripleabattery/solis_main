@@ -2,7 +2,8 @@
 
 #TODO: Cleanup, Documentation
 
-from config import page, mysql, drops
+from config import mysql, drops
+import solis
 import os, sys
 import cgi
 import cgitb; cgitb.enable()
@@ -10,6 +11,7 @@ import cgitb; cgitb.enable()
 form = cgi.FieldStorage()
 
 print("Content-Type: text/html\n\n")
+print(solis.start_html_arch)
 
 ########################
 #    Database Stuff    #
@@ -69,6 +71,7 @@ else:
         print("</h2></body></html>")
 
     else:
-        print(page.format(title=current[2], desc=current[3], image=current[4], rimage=current[5], drop=form["DROP"].value, idprev=previtem[6], idnext=nextitem[6], funcimg1=current[4], funcimg2=current[5]))
+        print(solis.html_body_arch.format(title=current[2], desc=current[3], image=current[4], image2=current[5], drop=form["DROP"].value, urlprev=previtem[6], urlnext=nextitem[6]))
+        print(solis.end_html_arch)
 
     cnx.close()
