@@ -2,7 +2,7 @@ start_html_arch = """
 <!DOCTYPE html>
 <html>
 <head>
-<title>SOLIS 2018 S/S Archive</title>
+<title>SOLIS PREMIERE</title>
 <link rel="stylesheet" type="text/css" href="/style/arch.css">
 <script src="/javascript/imgswap.js"></script>
 </head>
@@ -32,13 +32,13 @@ html_body_arch = """
 <div>
 <div>
 <a href="http://dev.sxlis.com/archives/{drop}/{urlprev}" class="left">
-<img src="/img/left.png">
+<img src="/img/left.svg">
 </a>
 <a href="http://sxlis.com/" class="logo">
-<img src="/img/boxlogo.png">
+<img src="/img/black_bogo.png">
 </a>
 <a href="http://dev.sxlis.com/archives/{drop}/{urlnext}" class="right">
-<img src="/img/right.png">
+<img src="/img/right.svg">
 </a>
 </div>
 </div>

@@ -11,16 +11,16 @@ mysql = {
 drops = {
     "dev" : {
         "getitems" : "SELECT * FROM `Items` WHERE `URL` = '{0}' ",
-        "geturls" : "SELECT * FROM `Items`"
+        "geturls" : "SELECT `Position`, `URL` FROM `Items` ORDER BY `Items`.`Position` ASC"
         },
 
-    "ss18" : {
+    "solispremiere" : {
         "getitems" : "SELECT * FROM `ss18` WHERE `URL` = '{0}' ",
-        "geturls" : "SELECT * FROM `ss18`"
+        "geturls" : "SELECT `Position`, `URL` FROM `ss18` ORDER BY `ss18`.`Position` ASC"
     },
 
     "aw18" : {
         "getitems" : "SELECT * FROM `aw18` WHERE `URL` = '{0}' ",
-        "geturls" : "SELECT * FROM `aw18`"
+        "geturls" : "SELECT `Position`, `URL` FROM `aw18` ORDER BY `aw18`.`Position` ASC"
     }
 }

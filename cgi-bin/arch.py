@@ -10,8 +10,6 @@ import cgitb; cgitb.enable()
 
 form = cgi.FieldStorage()
 
-print("Content-Type: text/html\n\n")
-print(solis.start_html_arch)
 
 ########################
 #    Database Stuff    #
@@ -36,33 +34,28 @@ else:
 
     try:
 
-        cursor.execute(sql.format(form["URL"].value))
-        current = cursor.fetchone()
-
-        try:
-            currentid = current[0]
-        except:
-            print("TODO: Make this a 404 page :^)")
-
         cursor.execute(sql2)
         results = cursor.fetchall()
-        sresults = sorted(results)
 
-        for x in sresults:    # loop gets current item's index within the results list then sets currentidindex to this number
-            if currentid == x[0]:
-                currentidindex = sresults.index(x)
-                break
 
 
         try:
-            nextitem = sresults[currentidindex+1]
+            cursor.execute(sql.format(form["URL"].value))
+            current = cursor.fetchone()
+
         except:
-            nextitem = sresults[0]    # If there is no nextitem, set nextitem to the first item
+            cursor.execute(sql.format(results[0][1]))
+            current = cursor.fetchone()
 
         try:
-            previtem = sresults[currentidindex-1]
+            nextitem = results[current[0]]
         except:
-            previtem = sresults[-1]    # If there is no previtem, set previtem to the last item
+            nextitem = results[0]    # If there is no nextitem, set nextitem to the first item
+
+        try:
+            previtem = results[current[0]-2]
+        except:
+            previtem = results[-1]    # If there is no previtem, set previtem to the last item
 
     except _mysql_exceptions.MySQLError as err:
         print("<h1>There was an Error:</h1><br>")
@@ -71,7 +64,17 @@ else:
         print("</h2></body></html>")
 
     else:
-        print(solis.html_body_arch.format(title=current[2], desc=current[3], image=current[4], image2=current[5], drop=form["DROP"].value, urlprev=previtem[6], urlnext=nextitem[6]))
-        print(solis.end_html_arch)
+        try:
+            current[0] # Try to index current. Redirect the user if there is an error.
+        except:
+            print("Location: http://dev.sxlis.com/errors/404.php") #TODO: Make URL configurable from config module
+            print("\n\n")
+            sys.exit()
+
+        else:
+            print("Content-Type: text/html\n\n")
+            print(solis.start_html_arch)
+            print(solis.html_body_arch.format(title=current[2], desc=current[3], image=current[4], image2=current[5], drop=form["DROP"].value, urlprev=previtem[1], urlnext=nextitem[1]))
+            print(solis.end_html_arch)
 
     cnx.close()
