@@ -1,0 +1,33 @@
+body {
+    font-family: futurapt;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+div.w {
+    width: 100%;
+    margin: 37vh 0 0 0;
+    text-align: center;
+}
+
+div.w p {
+    margin: 0;
+}
+
+div.w input {
+    width: 12.5%
+}
+
+div.w a {
+    text-decoration: none;
+}
+
+div.w form input.submit {
+    width: 3%;
+}
+
+div.w a img { 
+    width: 4%;
+}

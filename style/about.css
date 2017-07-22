@@ -1,0 +1,50 @@
+body {
+    font-family: futurapt;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0 0px;
+}
+
+div.s {
+    width: 10%;
+    margin: 35vh 0 0 7.5%;
+    float: left;
+    overflow: auto;
+}
+
+div.s img {
+    width: 100%;
+}
+
+div.a {
+    float: left;
+    width: 75%;
+    margin: 2vh 0 0 7.5%;
+}
+
+div.a p.a {
+    margin: 6vh 0 0 0;
+    font-size: 500%;
+}
+
+div.a p.b {
+    margin: 0;
+    font-size: 150%;
+}
+
+div.a p.c {
+    margin: 125%;
+    margin: .5% 0 .75% 0;
+}
+
+div.a p.d{
+    margin: 0;
+    font-size: 125%;
+}
+
+@font-face {
+    font-family: futurapt;
+    src: url(/fonts/4d6d50ec-b049-44ba-a001-e847c3e2dc79.ttf)
+}
