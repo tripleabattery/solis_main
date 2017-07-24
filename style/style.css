@@ -1,15 +1,42 @@
-html {
-    background-color: black;
-    
-    background-image: url("/img/splash.svg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    overflow: hidden;
+body {
+    font-family: futurapt;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0 0px;
 }
 
-.ui-loader-header {
-    display: none;
+div.s {
+    width: 10%;
+    margin: 35vh 0 0 45%;
+    float: left;
+}
+
+div.s img {
+    width: 100%;
+}
+
+div.l {
+    margin: 36vh 0 0 5vh;
+    overflow: auto;
+    float: left;
+}
+
+div.l a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 175%;
+}
+
+div.l a:hover {
+    text-decoration: underline;
+}
+
+div.l a span:hover {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: futurapt;
+    src: url(/fonts/4d6d50ec-b049-44ba-a001-e847c3e2dc79.ttf)
 }

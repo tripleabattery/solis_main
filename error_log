@@ -1,0 +1,4 @@
+[20-Apr-2017 11:45:30 America/Chicago] PHP Parse error:  syntax error, unexpected '$detect' (T_VARIABLE) in /home3/evosity/public_html/index.php on line 6
+[20-Apr-2017 11:46:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'detect' (T_STRING) in /home3/evosity/public_html/index.php on line 6
+[20-Apr-2017 11:47:11 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home3/evosity/public_html/index.php on line 8
+[20-Apr-2017 11:47:45 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home3/evosity/public_html/index.php on line 42
